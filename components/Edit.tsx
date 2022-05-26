@@ -16,8 +16,8 @@ import {NavigationContainer} from '@react-navigation/native';
 
 const Edit = ({navigation}: any) => {
 
-  const [UserName, setUserName] = useState("")
-  const [Email, setEmail] = useState("")
+  const [UserName, setUserName] = useState(store.username)
+  const [Email, setEmail] = useState(store.email)
 
   const handleEdit = () => {
     store.editUser(store.username, UserName, Email)
